@@ -2,7 +2,7 @@
 Notification when your amazon orders change status.
 
 # Usage
-To use this script, simply install it into TamperMonkey or GreaseMonkey and open the page https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first after logging into Amazon. It will automatically run and notify you at each interval you specific in the code.
+To use this script, simply install it into TamperMonkey or GreaseMonkey and open the page https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first after logging into Amazon. It will automatically run and notify you at each interval you specify in the code.
 
 # Installation Process
 1. Install either TamperMonkey (Chrome) or Greasemonkey (Firefox).
