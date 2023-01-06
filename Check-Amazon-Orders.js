@@ -13,7 +13,7 @@
 var newOrders = [];
 const RefreshRate = 5; // In minutes
 const DiscordWebHook = "WEBHOOKHERE"; // Webhook
-const PingUserID = "ID-HERE";
+const PingUserID = "ID-HERE"; // The user being tagged
 
 function sendMsg(Content) {
     const request = new XMLHttpRequest();
