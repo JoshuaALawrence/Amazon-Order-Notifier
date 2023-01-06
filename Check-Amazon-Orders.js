@@ -15,9 +15,10 @@
     'use strict';
     var newOrders = [];
     var RefreshRate = 5; // In minutes
+    var DiscordWebHook = "WEBHOOKHERE"; // Webhook
+    
     var checkOrders = function() {
     location.reload(true);
-
     const Orders = document.getElementsByClassName("a-box-group a-spacing-base order js-order-card");
     Orders.forEach(function(order){
         var Shipment = order.getElementsByClassName("a-box-inner");
@@ -34,15 +35,15 @@
         var gm_order_arriving = GM_getValue(Title + "_arriving");
         var gm_order_left = GM_getValue(Title + "_left");
 
-        if (gm_order_title.includes("https")) { return }
+        if (typeof gm_order_title !== 'undefined' && gm_order_title.includes("https")) { return }
 
         if (typeof gm_order_title !== 'undefined' && typeof gm_order_arriving !== 'undefined' && typeof gm_order_left !== 'undefined') {
             var Content = ""
             if (gm_order_arriving != Arriving) {
                 if (Arriving.includes("Delivered")) {
-                    Content = (" Hey <@USER-ID>,\n\n**" + Title + "**\n\nWas delivered. **" + Left + "**.");
+                    Content = (" Hey <@87777711757467648>,\n\n**" + Title + "**\n\nWas delivered. **" + Left + "**");
                 }else{
-                    Content = ("Hey <@USER-ID>, \n\n**" + Title + "**\n\nhas changed delivery status from **" + gm_order_arriving + "** to **" + Arriving +"**.");
+                    Content = ("Hey <@87777711757467648>, \n\n**" + Title + "**\n\nhas changed delivery status from **" + gm_order_arriving + "** to **" + Arriving +"**.");
                 }
                 sendMsg(Content);
                 GM_setValue(Title + "_title", Title);
@@ -70,7 +71,7 @@
 
 function sendMsg(Content) {
     const request = new XMLHttpRequest();
-    request.open("POST", "WEBOOK-URL");
+    request.open("POST", DiscordWebHook);
 
     request.setRequestHeader('Content-type', 'application/json');
 
