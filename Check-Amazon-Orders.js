@@ -11,9 +11,9 @@
 // @grant GM_getValue
 // ==/UserScript==
 var newOrders = [];
-var RefreshRate = 5; // In minutes
-var DiscordWebHook = "WEBHOOKHERE"; // Webhook
-var PingUserID = "ID-HERE";
+const RefreshRate = 5; // In minutes
+const DiscordWebHook = "WEBHOOKHERE"; // Webhook
+const PingUserID = "ID-HERE";
 
 function sendMsg(Content) {
     const request = new XMLHttpRequest();
