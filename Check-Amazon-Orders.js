@@ -21,9 +21,14 @@
     location.reload(true);
     const Orders = document.getElementsByClassName("a-box-group a-spacing-base order js-order-card");
     Orders.forEach(function(order){
+        // Get the entire element the orders reside in.
         var Shipment = order.getElementsByClassName("a-box-inner");
+        // When the product is expected to arrive.
         var Arriving = Shipment[1].getElementsByClassName("a-size-medium a-text-bold")[0].textContent.trim();
+        // Get the title of the product.
         var Title = Shipment[1].getElementsByClassName("a-link-normal")[1].textContent.trim();
+        
+        // Look for it being dropped off.
         var Left = "Awaiting Delivery"
         var ARows = Shipment[1].getElementsByClassName("a-row");
         ARows.forEach(function(row){
@@ -31,6 +36,7 @@
                 Left = row.textContent.trim();
            }
         });
+        
         var gm_order_title = GM_getValue(Title + "_title");
         var gm_order_arriving = GM_getValue(Title + "_arriving");
         var gm_order_left = GM_getValue(Title + "_left");
