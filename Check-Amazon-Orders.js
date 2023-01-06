@@ -47,7 +47,7 @@ var DiscordWebHook = "WEBHOOKHERE"; // Webhook
             var Content = ""
             if (gm_order_arriving != Arriving) {
                 if (Arriving.includes("Delivered")) {
-                    Content = (" Hey <@ID-HERE>,\n\n**" + Title + "**\n\nWas delivered. **" + Left + "**");
+                    Content = ("Hey <@ID-HERE>,\n\n**" + Title + "**\n\nWas delivered. **" + Left + "**");
                 }else{
                     Content = ("Hey <@ID-HERE>, \n\n**" + Title + "**\n\nhas changed delivery status from **" + gm_order_arriving + "** to **" + Arriving +"**.");
                 }
