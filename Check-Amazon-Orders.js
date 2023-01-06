@@ -10,12 +10,12 @@
 // @grant GM_setValue
 // @grant GM_getValue
 // ==/UserScript==
+var newOrders = [];
+var RefreshRate = 5; // In minutes
+var DiscordWebHook = "WEBHOOKHERE"; // Webhook
 
 (function() {
     'use strict';
-    var newOrders = [];
-    var RefreshRate = 5; // In minutes
-    var DiscordWebHook = "WEBHOOKHERE"; // Webhook
     
     var checkOrders = function() {
     location.reload(true);
