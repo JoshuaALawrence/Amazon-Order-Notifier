@@ -21,10 +21,12 @@ To use this script, simply install it into TamperMonkey or GreaseMonkey and open
 
 6. If not already added, add https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first to the list of matches and then click save at the bottom.
 
-## In Action
 ![image](https://user-images.githubusercontent.com/122106941/211043657-d5b82cb0-b4de-411a-abb8-90d203936ccf.png)
 
 ![image](https://user-images.githubusercontent.com/122106941/211043809-705d2a27-42d8-4418-8286-adcf615439b4.png)
+
+
+## In Action
 
 ![image](https://user-images.githubusercontent.com/122106941/211046510-fff504a6-59ad-4d95-8c43-b0c949261515.png)
 
