@@ -59,7 +59,7 @@ const tomorrowName = dayNames[tomorrow.getDay()];
 
         if (typeof gm_order_title !== 'undefined' && typeof gm_order_arriving !== 'undefined' && typeof gm_order_left !== 'undefined') {
             var Content = ""
-            if (gm_order_arriving != Arriving) {
+            if (gm_order_arriving != Arriving.toLowerCase()) {
                 if (Arriving.toLowerCase().includes("delivered")) {
                     Content = (" Hey <@ID>,\n\n**" + Title + "**\n\nWas delivered. **" + Left + "**");
                     sendMsg(Content);
